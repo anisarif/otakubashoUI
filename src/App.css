@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Ungai';
+  src: local('Ungai'), url('./fonts/Ungai.ttf') format('truetype');
+}
