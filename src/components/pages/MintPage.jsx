@@ -95,16 +95,18 @@ const MintPage = () => {
   const renderContent = () => {
     if (currentAccount && !characterNFT) {
       return (
-        <SelectCharacter setCharacterNFT={setCharacterNFT} /> 
+        <div className="flex h-screen">
+            <SelectCharacter setCharacterNFT={setCharacterNFT} />
+        </div> 
     );
      
     } else if (currentAccount && characterNFT) {
       return (
         <div className="mt-40 mb-40">
         <SelectCharacter setCharacterNFT={setCharacterNFT} /> 
-        <Link to='/GamePage' className="flex">
-        <button className="flex flex-col items-center font-bold bg-black rounded-3xl text-pink-300 border-4 border-pink-300 p-5 text-2xl w-[360px]">PLAY THE GAME !</button>
-        </Link>
+            <Link to='/GamePage' className="flex">
+                <button className="flex flex-col items-center font-bold bg-black rounded-3xl text-pink-300 border-4 border-pink-300 p-5 text-2xl w-[360px]">PLAY THE GAME !</button>
+            </Link>
         </div>
       );
     }

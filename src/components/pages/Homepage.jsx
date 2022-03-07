@@ -65,12 +65,12 @@ const Homepage = () => {
   const renderContent = () => {
     if (!currentAccount) {
       return (
-        <button onClick={connectWalletAction} className=" mb-40 mx-10 font-bold bg-pink-300 rounded-3xl text-black p-5  mt-20 text-2xl ">CONNECT WALLET </button>
+        <button onClick={connectWalletAction} className="flex justify-center mb-40 mx-10 font-bold bg-pink-300 rounded-3xl text-black p-5  mt-20 text-2xl ">CONNECT WALLET </button>
       );
     } else {
       return (
         <Link to='/MintPage'>
-        <button className=" mx-10 mb-40 font-bold bg-pink-300 rounded-3xl text-black p-5  mt-10 text-2xl ">MINT YOUR NFT NOW !</button>
+        <button className=" mx-10 font-bold bg-pink-300 rounded-3xl text-black p-5  mt-10 text-2xl ">MINT YOUR NFT NOW !</button>
         <div className="m-20"/>
         </Link>
       );
@@ -79,7 +79,7 @@ const Homepage = () => {
 
 
   return (
-    <main className=" justify-around w-full h-full bg-black bg-cover pl-40 flex flex-row">
+    <main className=" justify-around w-screen h-screen bg-black bg-cover pl-40 flex flex-row">
       <title>Home Page</title>
       <div className="mt-40 overflow-y-auto flex flex-col">
         <h1 className="text-white text-5xl my-10 p-25 flex">Welcome to</h1>

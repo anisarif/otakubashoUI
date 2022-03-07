@@ -111,7 +111,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
 
   const renderCharacters = () =>
       characters.map((character, index) => (
-        <div key={character.name}>
+        <div className="" key={character.name}>
           <img className="flex flex-col w-[360px] h-[360px] rounded-3xl" src={character.imageURI} alt={character.name}/>     
           <button onClick={()=> mintCharacterNFTAction(index)} className="font-bold bg-pink-300 rounded-3xl text-black p-7 my-5 mt-20 text-2xl w-[360px] ">{`MINT ${character.name}`}</button> 
         </div>
