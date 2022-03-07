@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import otakuGirl from "./images/Otaku2.png"
+import otakuGirl from "../../images/Otaku2.png"
 
 
 
@@ -61,10 +61,10 @@ const Register = () => {
   }, []);
 
   return (
-    <main className="flex justify-evenly h-full bg-black px-40">
+    <main className="flex justify-evenly bg-black px-40 items-center">
         <title>Register</title>
-        <button className="font-bold bg-pink-300 text-black p-10 my-40 text-2xl " onClick={connectWalletAction}>
-            Connect Wallet To Get Started
+        <button className="h-30 rounded-3xl font-bold bg-pink-300 p-5 text-black text-2xl " onClick={connectWalletAction}>
+            Connect your Wallet To Get Started
         </button>
       <img className="h-screen px-2 m-4" src={otakuGirl} alt="otaku girl"/>
     </main>
