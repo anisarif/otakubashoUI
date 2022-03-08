@@ -97,7 +97,7 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
 
     
   return (
-    <div className=" flex h-screen w-screen justify-around bg-black bg-full">
+    <div className=" flex flex-col h-screen justify-center bg-black bg-full">
     {boss && (
           <div className="text-white">
             <div className="">
@@ -120,8 +120,7 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
         )}
 
       {characterNFT && (
-        <div className="flex h-screen w-screen justify-around bg-black bg-full text-white">
-          <h2>Your Character</h2>
+        <div className="flex flex-col h-screen justify-center bg-black bg-full text-white">
           <div className="">
             <div className="">
               <h2>{characterNFT.name}</h2>

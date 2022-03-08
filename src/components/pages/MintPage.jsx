@@ -101,7 +101,9 @@ const MintPage = () => {
      
     } else if (currentAccount && characterNFT) {
       return (
+        <div className="flex h-screen">
         <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
+        </div>
       );
     }
   };
