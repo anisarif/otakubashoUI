@@ -9,6 +9,7 @@ import { Link } from "react-router-dom"
 const Homepage = () => {
   const [currentAccount, setCurrentAccount] = useState(null);
 
+
   const checkIfWalletIsConnected = async () => {
     try {
       const { ethereum } = window;
@@ -61,6 +62,7 @@ const Homepage = () => {
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []);
+  
 
   const renderContent = () => {
     if (!currentAccount) {
@@ -70,9 +72,10 @@ const Homepage = () => {
     } else {
       return (
         <Link to='/MintPage'>
-        <button className=" mx-10 font-bold bg-pink-300 rounded-3xl text-black p-5  mt-10 text-2xl ">MINT YOUR NFT NOW !</button>
+        <button className=" mx-10 font-bold bg-pink-300 rounded-3xl text-black p-5  mt-10 text-2xl ">MINT AND PLAY !!!</button>
         <div className="m-20"/>
         </Link>
+
       );
     }
   };
@@ -82,9 +85,9 @@ const Homepage = () => {
     <main className=" justify-around w-screen h-screen bg-black bg-cover pl-40 flex flex-row">
       <title>Home Page</title>
       <div className="mt-40 overflow-y-auto flex flex-col">
-        <h1 className="text-white text-5xl my-10 p-25 flex">Welcome to</h1>
-        <h1 className="text-pink-300 text-9xl mb-2 font-['Ungai']">Otaku</h1>
-        <h1 className="text-white text-9xl font-['Ungai']">Basho</h1>
+        <h1 className="text-white text-4xl my-10 p-25 flex">Welcome to</h1>
+        <h1 className="text-pink-300 text-8xl mb-2 font-['Ungai']">Otaku</h1>
+        <h1 className="text-white text-8xl font-['Ungai']">Basho</h1>
         <div className="text-white text-2xl my-10">
 
           <TypeWriterEffect 

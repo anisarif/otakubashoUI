@@ -110,7 +110,7 @@ const MintPage = () => {
 
 
   return (
-    <main className="flex flex-row justify-center h-full bg-black px-40">
+    <main className="flex flex-col h-full bg-black px-40">
       <title>Mint Page</title>
         {renderContent()}
       <img className="fixed right-40 h-screen px-2 m-4" src={otakuGirl} alt="otaku girl"/>
