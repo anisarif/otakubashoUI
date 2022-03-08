@@ -103,7 +103,8 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
             <div className="">
               <h2 className="text-white">🔥 {boss.name} 🔥</h2>
               <div className="">
-                <img src={boss.imageURI} alt={`Boss ${boss.name}`} />
+                <img className='w-[360px] h-[360px] rounded-3xl'
+                src={boss.imageURI} alt={`Boss ${boss.name}`} />
                 <div className="">
                   <progress className="text-white" value={boss.hp} max={boss.maxHp} />
                   <p className="text-white">{`${boss.hp} / ${boss.maxHp} HP`}</p>
@@ -124,7 +125,7 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
           <div className="">
             <div className="">
               <h2>{characterNFT.name}</h2>
-              <img
+              <img className='w-[360px] h-[360px] rounded-3xl'
                 src={characterNFT.imageURI} alt={`Character ${characterNFT.name}`}/>
               <div className="">
                 <progress value={characterNFT.hp} max={characterNFT.maxHp} />
