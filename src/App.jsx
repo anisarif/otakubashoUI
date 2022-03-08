@@ -14,7 +14,6 @@ const App = () => {
         <Route index element={<Homepage />} />
         <Route path="/MintPage" element={<MintPage/>} />
         <Route path="/GamePage" element={<GamePage/>} />
-
       </Routes>
     </BrowserRouter>
   );

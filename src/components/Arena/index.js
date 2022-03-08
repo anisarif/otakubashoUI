@@ -6,7 +6,7 @@ import OtakuGame from '../../utils/OtakuGame.json';
 /*
  * We pass in our characterNFT metadata so we can show a cool card in our UI
  */
-const Arena = ({ characterNFT, setcharacterNFT }) => {
+const Arena = ({ characterNFT, setCharacterNFT }) => {
   // State
     const [gameContract, setGameContract] = useState(null);
     
@@ -55,10 +55,11 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
     } else {
       console.log('Ethereum object not found');
     };
+  }, []);
 
+  useEffect(() => {
     const fetchBoss = async () => {
       const bossTxn = await gameContract.getBigBoss();
-      console.log('Boss:', bossTxn);
       setBoss(transformCharacterData(bossTxn));
     };
     const onAttackComplete = (newBossHp, newPlayerHp) => {
@@ -92,7 +93,7 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
             gameContract.off('AttackComplete', onAttackComplete);
         }
     }
-}, [gameContract]);
+}, [gameContract, setCharacterNFT]);
 
 
     
