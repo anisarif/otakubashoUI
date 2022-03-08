@@ -6,7 +6,7 @@ import OtakuGame from '../../utils/OtakuGame.json';
 /*
  * We pass in our characterNFT metadata so we can show a cool card in our UI
  */
-const Arena = ({ characterNFT, setcharacterNFT }) => {
+const Arena = ({ characterNFT, setCharacterNFT }) => {
   // State
     const [gameContract, setGameContract] = useState(null);
     
@@ -92,7 +92,7 @@ const Arena = ({ characterNFT, setcharacterNFT }) => {
             gameContract.off('AttackComplete', onAttackComplete);
         }
     }
-}, [gameContract]);
+}, [gameContract, setCharacterNFT]);
 
 
     
