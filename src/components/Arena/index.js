@@ -55,10 +55,11 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
     } else {
       console.log('Ethereum object not found');
     };
+  }, []);
 
+  useEffect(() => {
     const fetchBoss = async () => {
       const bossTxn = await gameContract.getBigBoss();
-      console.log('Boss:', bossTxn);
       setBoss(transformCharacterData(bossTxn));
     };
     const onAttackComplete = (newBossHp, newPlayerHp) => {
