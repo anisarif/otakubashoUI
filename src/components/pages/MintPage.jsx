@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react"
 import otakuGirl from "../../images/Otaku2.png"
-import { Link } from "react-router-dom"
 import SelectCharacter from "../SelectCharacter"
 import { CONTRACT_ADDRESS, transformCharacterData } from '../../constants'
 import OtakuGame from '../../utils/OtakuGame.json'
 import { ethers } from "ethers"
-
+import Arena from "../Arena"
 
 
 
@@ -102,12 +101,7 @@ const MintPage = () => {
      
     } else if (currentAccount && characterNFT) {
       return (
-        <div className="mt-40 mb-40">
-        <SelectCharacter setCharacterNFT={setCharacterNFT} /> 
-            <Link to='/GamePage' className="flex">
-                <button className="flex flex-col items-center font-bold bg-black rounded-3xl text-pink-300 border-4 border-pink-300 p-5 text-2xl w-[360px]">PLAY THE GAME !</button>
-            </Link>
-        </div>
+        <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
       );
     }
   };
