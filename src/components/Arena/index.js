@@ -38,7 +38,8 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
       };
 
   // UseEffects
-    useEffect(() => {
+
+  useEffect(() => {
 
     const { ethereum } = window;
 
@@ -113,7 +114,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
               </div>
             </div>
             <div className="">
-              <button className="text-white" onClick={runAttackAction}>
+              <button className="text-white bg-black  border-4 border-pink-300 flex m-2 p-2 rounded-3xl hover:bg-pink-700" onClick={runAttackAction}>
                 {`💥 Attack ${boss.name}`}
               </button>
             </div>
